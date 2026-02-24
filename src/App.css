@@ -1,11 +1,11 @@
 :root {
-  --bg: #0f1720;
-  --card: #0b1220;
-  --muted: #9aa6b2;
-  --accent: linear-gradient(90deg,#ff8a00 0%,#ff3cac 100%);
+  --bg: #000000;
+  --card: #0a0a0a;
+  --muted: #888888;
+  --accent: linear-gradient(90deg, #7c5cff 0%, #000 100%);
   --primary: #7c5cff;
-  --glass: rgba(255,255,255,0.04);
-  --glass-2: rgba(255,255,255,0.02);
+  --glass: rgba(124, 92, 255, 0.08);
+  --glass-2: rgba(124, 92, 255, 0.04);
 }
 
 #root {
@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f1720 0%, #1a2332 100%);
+  background: #000000;
 }
 
 .login-container {
@@ -38,8 +38,8 @@
 }
 
 .login-box {
-  background: rgba(11, 18, 32, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(124, 92, 255, 0.3);
   border-radius: 16px;
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -189,8 +189,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: rgba(11, 18, 32, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #000000;
+  border-bottom: 1px solid rgba(124, 92, 255, 0.2);
   backdrop-filter: blur(10px);
   gap: 1.5rem;
 }
@@ -259,8 +259,8 @@
 /* SIDEBAR */
 .sidebar {
   width: 240px;
-  background: rgba(11, 18, 32, 0.8);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  background: #000000;
+  border-right: 1px solid rgba(124, 92, 255, 0.2);
   padding: 1.5rem 0;
   overflow-y: auto;
   display: flex;
@@ -272,7 +272,7 @@
   padding: 1rem 1.5rem;
   background: transparent;
   border: none;
-  color: var(--muted);
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -285,7 +285,7 @@
 }
 
 .sidebar-module:hover {
-  background: rgba(124, 92, 255, 0.08);
+  background: rgba(124, 92, 255, 0.12);
   color: #fff;
   padding-left: 2rem;
 }
@@ -303,6 +303,74 @@
   min-width: 1.3rem;
 }
 
+/* SIDEBAR NEW CLASSES */
+.sidebar-header {
+  padding: 1.5rem 1.5rem 1rem;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(124, 92, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #7c5cff;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.sidebar-item {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 160ms;
+  text-align: left;
+  width: 100%;
+}
+
+.sidebar-item:hover {
+  background: rgba(124, 92, 255, 0.12);
+  color: #fff;
+  padding-left: 2rem;
+}
+
+.sidebar-item.active {
+  background: rgba(124, 92, 255, 0.15);
+  color: #fff;
+  border-left: 3px solid var(--primary);
+  padding-left: calc(1.5rem - 3px);
+  font-weight: 600;
+}
+
+.sidebar-label {
+  color: inherit;
+}
+
+.sidebar-footer {
+  padding: 1.5rem 1.5rem 1rem;
+  border-top: 1px solid rgba(124, 92, 255, 0.2);
+  text-align: center;
+}
+
+.sidebar-version {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #888888;
+}
+
 /* HOME SECTION */
 .home-section {
   display: flex;
@@ -312,8 +380,8 @@
 
 .home-header {
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(124, 92, 255, 0.06);
+  border: 1px solid rgba(124, 92, 255, 0.2);
   border-radius: 12px;
 }
 
@@ -336,8 +404,8 @@
 }
 
 .chart-card {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(124, 92, 255, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
@@ -408,8 +476,8 @@
   gap: 1rem;
   align-items: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(124, 92, 255, 0.2);
   border-radius: 12px;
   cursor: pointer;
   transition: all 160ms;
@@ -446,10 +514,10 @@
 }
 
 .dashboard-content {
-  background: rgba(255, 255, 255, 0.01);
+  background: #000000;
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: none;
 }
 
 .dashboard-content h2 {
@@ -472,10 +540,10 @@
 }
 
 .feature-table thead th {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--muted);
+  background: rgba(124, 92, 255, 0.1);
+  color: #7c5cff;
   font-weight: 700;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(124, 92, 255, 0.2);
 }
 
 .feature-table tbody tr {
@@ -734,15 +802,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+  border: 1px solid rgba(124, 92, 255, 0.3);
   border-radius: 14px;
   max-width: 600px;
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
 }
 
 .modal-header {
@@ -750,10 +818,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(124, 92, 255, 0.2);
   position: sticky;
   top: 0;
-  background: var(--card);
+  background: #0a0a0a;
 }
 
 .modal-header h3 {
@@ -812,10 +880,10 @@
 
 /* TABLES & CRUD */
 .table-wrapper {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(10, 10, 10, 0.6);
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(124, 92, 255, 0.2);
 }
 
 .table-header {
@@ -999,8 +1067,8 @@
 .form-group textarea {
   padding: 0.75rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(124, 92, 255, 0.3);
+  background: rgba(124, 92, 255, 0.05);
   color: #fff;
   font-family: inherit;
   font-size: 0.95rem;
@@ -1012,8 +1080,8 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
-  background: rgba(124, 92, 255, 0.08);
-  box-shadow: 0 0 12px rgba(124, 92, 255, 0.2);
+  background: rgba(124, 92, 255, 0.1);
+  box-shadow: 0 0 12px rgba(124, 92, 255, 0.3);
 }
 
 .form-actions {
