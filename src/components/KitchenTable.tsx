@@ -22,12 +22,12 @@ export default function KitchenTable() {
   const [showModal, setShowModal] = useState(false)
   const [editingId, setEditingId] = useState<string | null>(null)
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<Omit<Order, 'id'> & { startTime: string }>({
     orderNum: '',
     dishes: '',
     quantity: 1,
     cookTime: 15,
-    status: 'pending' as const,
+    status: 'pending',
     chef: '',
     startTime: '',
   })
@@ -153,7 +153,7 @@ export default function KitchenTable() {
           <div className="form-row">
             <div className="form-group">
               <label>Estado</label>
-              <select value={form.status} onChange={(e) => setForm({...form, status: e.target.value as any})}>
+              <select value={form.status} onChange={(e) => setForm({...form, status: e.target.value as 'pending' | 'cooking' | 'ready' | 'served'})}>
                 <option value="pending">Pendiente</option>
                 <option value="cooking">Cocinando</option>
                 <option value="ready">Listo</option>

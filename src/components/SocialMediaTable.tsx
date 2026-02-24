@@ -24,16 +24,17 @@ export default function SocialMediaTable() {
   const [showModal, setShowModal] = useState(false)
   const [editingId, setEditingId] = useState<string | null>(null)
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<Campaign>({
+    id: '',
     name: '',
     platform: '',
     type: '',
-    startDate: '',
+    startDate: new Date().toISOString().split('T')[0],
     endDate: '',
     budget: 0,
     reach: 0,
     engagement: 0,
-    status: 'active' as const,
+    status: 'active',
   })
 
   const handleOpenForm = (campaign?: Campaign) => {
@@ -42,6 +43,7 @@ export default function SocialMediaTable() {
       setEditingId(campaign.id)
     } else {
       setForm({
+        id: '',
         name: '',
         platform: '',
         type: '',
@@ -66,7 +68,8 @@ export default function SocialMediaTable() {
     if (editingId) {
       setCampaigns(campaigns.map(c => c.id === editingId ? { ...c, ...form } : c))
     } else {
-      setCampaigns([...campaigns, { id: Date.now().toString(), ...form }])
+      const newId = Date.now().toString()
+      setCampaigns([...campaigns, { ...form, id: newId }])
     }
     setShowModal(false)
   }
@@ -179,7 +182,7 @@ export default function SocialMediaTable() {
             </div>
             <div className="form-group">
               <label>Estado</label>
-              <select value={form.status} onChange={(e) => setForm({...form, status: e.target.value as any})}>
+              <select value={form.status} onChange={(e) => setForm({...form, status: e.target.value as 'active' | 'paused' | 'completed'})}>
                 <option value="active">Activo</option>
                 <option value="paused">Pausado</option>
                 <option value="completed">Completado</option>

@@ -1,8 +1,9 @@
 import React from 'react'
 
-export type ModuleKey = 'inventory' | 'kitchen' | 'loyalty' | 'reports' | 'social' | 'orders'
+export type ModuleKey = 'home' | 'inventory' | 'kitchen' | 'loyalty' | 'reports' | 'social' | 'orders'
 
 const modules: Array<{ key: ModuleKey; icon: string; label: string }> = [
+  { key: 'home', icon: '📊', label: 'Inicio' },
   { key: 'inventory', icon: '📦', label: 'Inventario' },
   { key: 'kitchen', icon: '🔥', label: 'Cocina' },
   { key: 'loyalty', icon: '🤝', label: 'Fidelización' },

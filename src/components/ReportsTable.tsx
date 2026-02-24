@@ -21,9 +21,9 @@ export default function ReportsTable() {
   const [showModal, setShowModal] = useState(false)
   const [editingId, setEditingId] = useState<string | null>(null)
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<Omit<Transaction, 'id'>>({
     date: '',
-    type: 'ingreso' as const,
+    type: 'ingreso',
     concept: '',
     amount: 0,
     category: '',
@@ -139,7 +139,7 @@ export default function ReportsTable() {
             </div>
             <div className="form-group">
               <label>Tipo</label>
-              <select value={form.type} onChange={(e) => setForm({...form, type: e.target.value as any})}>
+              <select value={form.type} onChange={(e) => setForm({...form, type: e.target.value as 'ingreso' | 'egreso'})}>
                 <option value="ingreso">Ingreso</option>
                 <option value="egreso">Egreso</option>
               </select>

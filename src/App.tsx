@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './App.css'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import features from './data/features.json'
 
 function App() {
   const [isAuth, setIsAuth] = useState(false)
@@ -23,7 +22,7 @@ function App() {
       {!isAuth ? (
         <Login onLogin={handleLogin} />
       ) : (
-        <Dashboard features={features} user={user} onLogout={handleLogout} />
+        <Dashboard user={user} onLogout={handleLogout} />
       )}
     </div>
   )

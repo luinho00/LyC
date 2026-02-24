@@ -22,11 +22,11 @@ export default function LoyaltyTable() {
   const [showModal, setShowModal] = useState(false)
   const [editingId, setEditingId] = useState<string | null>(null)
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<Omit<Client, 'id'>>({
     name: '',
     phone: '',
     email: '',
-    segment: 'Regular' as const,
+    segment: 'Regular',
     totalVisits: 0,
     favoriteDish: '',
     joinDate: '',
@@ -137,7 +137,7 @@ export default function LoyaltyTable() {
           <div className="form-row">
             <div className="form-group">
               <label>Segmento</label>
-              <select value={form.segment} onChange={(e) => setForm({...form, segment: e.target.value as any})}>
+              <select value={form.segment} onChange={(e) => setForm({...form, segment: e.target.value as 'VIP' | 'Regular' | 'Ocasional'})}>
                 <option value="VIP">VIP</option>
                 <option value="Regular">Regular</option>
                 <option value="Ocasional">Ocasional</option>
