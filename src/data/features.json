@@ -1,0 +1,13 @@
+[
+  {"nivel1":"Login","nivel2":"Inventario","nivel3":"Registro de Insumos","actor":"Administrador","descripcion":"Ingreso de facturas de carne y carbón."},
+  {"nivel1":"Login","nivel2":"Inventario","nivel3":"Alertas de Stock","actor":"Administrador","descripcion":"Configuración de mínimos de seguridad."},
+  {"nivel1":"Login","nivel2":"Inventario","nivel3":"Costos Proveedores","actor":"Administrador","descripcion":"Historial de precios para ingeniería de menú."},
+  {"nivel1":"Login","nivel2":"Cocina","nivel3":"Comandas Activas","actor":"Parrillero","descripcion":"Visualización de pedidos en tiempo real."},
+  {"nivel1":"Login","nivel2":"Cocina","nivel3":"Control de Tiempos","actor":"Parrillero","descripcion":"Cronómetro de cocción por tipo de corte."},
+  {"nivel1":"Login","nivel2":"Cocina","nivel3":"Historial de Turnos","actor":"Parrillero","descripcion":"Registro de platos servidos por jornada."},
+  {"nivel1":"Login","nivel2":"Fidelización","nivel3":"Registro de Clientes","actor":"Administrador","descripcion":"Captura de datos para el CRM (WhatsApp)."},
+  {"nivel1":"Login","nivel2":"Fidelización","nivel3":"Campañas Visuales","actor":"Administrador","descripcion":"Envío de contenido \"Food Porn\" segmentado."},
+  {"nivel1":"Login","nivel2":"Fidelización","nivel3":"Platos Favoritos","actor":"Administrador","descripcion":"Análisis de preferencias por cliente."},
+  {"nivel1":"Login","nivel2":"Reportes","nivel3":"Rentabilidad","actor":"Administrador","descripcion":"Cruce de ventas vs. costos de insumos."},
+  {"nivel1":"Login","nivel2":"Reportes","nivel3":"KPIs Operativos","actor":"Administrador","descripcion":"Reporte de tiempos promedio de despacho."}
+]
